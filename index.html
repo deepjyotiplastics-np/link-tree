@@ -63,14 +63,16 @@
   <style>
     .branches {
       display: flex;
+      flex-direction: row;
       justify-content: center;
+      align-items: stretch;
       gap: 16px;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       padding: 0 16px 30px;
     }
     .branch-box {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255,255,255,0.25);
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+      border: none;
       border-radius: 14px;
       padding: 18px 22px;
       display: flex;
@@ -78,17 +80,17 @@
       align-items: center;
       gap: 8px;
       min-width: 130px;
-      backdrop-filter: blur(6px);
-      transition: transform 0.2s, background 0.2s;
+      box-shadow: 0 4px 20px rgba(253, 29, 29, 0.35);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
     .branch-box:hover {
       transform: translateY(-4px);
-      background: rgba(255,255,255,0.2);
+      box-shadow: 0 8px 28px rgba(253, 29, 29, 0.55);
     }
     .branch-box i {
       font-size: 1.5rem;
       color: #fff;
-      opacity: 0.85;
+      text-shadow: 0 0 8px #fff, 0 0 18px #fff, 0 0 30px #fff;
     }
     .branch-name {
       font-family: sans-serif;
@@ -97,7 +99,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      opacity: 0.75;
+      text-shadow: 0 0 8px #fff, 0 0 18px #fff, 0 0 30px #fff;
     }
     .branch-phone {
       font-family: sans-serif;
@@ -105,6 +107,7 @@
       font-size: 1rem;
       font-weight: 700;
       text-decoration: none;
+      text-shadow: 0 0 8px #fff, 0 0 18px #fff, 0 0 30px #fff;
     }
     .branch-phone:hover {
       text-decoration: underline;
